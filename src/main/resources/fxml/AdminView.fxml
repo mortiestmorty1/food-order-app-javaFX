@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.viteats.vitetats1.controller.AdminController" spacing="10" alignment="CENTER">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- User Management Section -->
+    <VBox spacing="10" alignment="CENTER">
+        <HBox spacing="10" alignment="CENTER">
+            <TextField fx:id="usernameField" promptText="Username"/>
+            <TextField fx:id="passwordField" promptText="Password"/>
+            <Button text="Add User" onAction="#addUser"/>
+            <Button text="Remove User" onAction="#removeUser"/>
+        </HBox>
+        <ListView fx:id="userListView" prefHeight="150.0" prefWidth="300.0"/>
+    </VBox>
+
+    <!-- Feedback Section -->
+    <VBox spacing="10" alignment="CENTER">
+        <Button text="View Feedback" onAction="#viewFeedback"/>
+        <ListView fx:id="feedbackListView" prefHeight="150.0" prefWidth="300.0"/>
+    </VBox>
+
+    <!-- Promotion Management Section -->
+    <VBox spacing="10" alignment="CENTER">
+        <HBox spacing="10" alignment="CENTER">
+            <TextField fx:id="promotionDescriptionField" promptText="Promotion Description"/>
+            <TextField fx:id="promotionDiscountField" promptText="Discount (%)"/>
+            <Button text="Add Promotion" onAction="#addPromotion"/>
+            <Button text="Remove Promotion" onAction="#removePromotion"/>
+        </HBox>
+        <ListView fx:id="promotionListView" prefHeight="150.0" prefWidth="300.0"/>
+    </VBox>
+
+    <!-- Driver Management Section -->
+    <VBox spacing="10" alignment="CENTER">
+        <HBox spacing="10" alignment="CENTER">
+            <TextField fx:id="driverUsernameField" promptText="Driver Username"/>
+            <TextField fx:id="driverPasswordField" promptText="Driver Password"/>
+        </HBox>
+        <HBox spacing="10" alignment="CENTER">
+            <TextField fx:id="driverIDField" promptText="Driver ID"/>
+            <TextField fx:id="driverVehicleTypeField" promptText="Vehicle Type"/>
+            <TextField fx:id="driverAvailabilityField" promptText="Availability (true/false)"/>
+        </HBox>
+        <Button text="Add Driver" onAction="#addDriver"/>
+        <VBox spacing="10" alignment="CENTER">
+            <Button text="Load Orders" onAction="#loadOrders"/>
+            <ListView fx:id="orderListView" prefHeight="150.0" prefWidth="300.0"/>
+        </VBox>
+        <VBox spacing="10" alignment="CENTER">
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="itemNameField" promptText="Item Name"/>
+                <TextField fx:id="itemPriceField" promptText="Price"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="itemStockField" promptText="Stock"/>
+                <TextField fx:id="itemDeliveryTimeField" promptText="Delivery Time (mins)"/>
+            </HBox>
+            <Button text="Add Menu Item" onAction="#addMenuItem"/>
+            <ListView fx:id="menuListView" prefHeight="150.0" prefWidth="300.0"/>
+        </VBox>
+    </VBox>
+
+    <!-- Logout Button -->
+    <Button text="Logout" onAction="#logout"/>
+</VBox>

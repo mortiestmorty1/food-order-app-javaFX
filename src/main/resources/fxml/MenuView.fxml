@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.viteats.vitetats1.controller.MenuItemController" spacing="10" alignment="CENTER">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <ListView fx:id="menuListView" prefHeight="200.0" prefWidth="300.0"/>
+    <ComboBox fx:id="promotionsComboBox" promptText="Select Promotion"/>
+    <ComboBox fx:id="modeOfEatingComboBox" promptText="Select Mode of Eating"/>
+    <ComboBox fx:id="paymentMethodComboBox" promptText="Select Payment Method"/>
+    <Button text="Place Order and Pay" onAction="#placeOrder"/>
+    <Button text="Logout" onAction="#logout"/>
+</VBox>
